@@ -1,0 +1,39 @@
+/* Navbar custom styling */
+.navbar {
+  background: #111; /* dark background */
+  padding: 0.8rem 2rem;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bcd4 !important; /* highlight brand */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .navbar-nav {
+    margin-left: auto; /* push menu to right */
+
+    .nav-link {
+      color: rgb(10, 8, 8) !important;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease-in-out;
+      font-weight: 500;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #00bcd4 !important; /* hover effect */
+      text-decoration: underline;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1); /* makes hamburger icon white */
+  }
+}

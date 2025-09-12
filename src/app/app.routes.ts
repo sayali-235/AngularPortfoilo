@@ -1,3 +1,17 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { EducationComponent } from './components/education/education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
+    { path: 'education', component: EducationComponent },
+    { path: 'projects', component: ProjectsComponent },
+    { path: 'skills', component: SkillsComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'footer', component: FooterComponent },
+];
