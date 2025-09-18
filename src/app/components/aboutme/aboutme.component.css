@@ -1,0 +1,27 @@
+/* About Section Specific Adjustments (if needed) */
+.about-section {
+  padding:    20px 20px 120px;
+  min-height: 100vh; 
+  display: flex;  
+  align-items: center;
+  }
+
+Fade-in animations already global, but can add delay
+.fade-in-left, .fade-in-right {
+  opacity: 0;
+  visibility: hidden;
+  animation-fill-mode: forwards; /* keep final state */
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1.2s ease forwards;
+  animation-delay: 0.3s; /* optional delay */
+  visibility: visible;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1.5s ease forwards;
+  animation-delay: 0.5s;
+  visibility: visible;
+}
+

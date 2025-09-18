@@ -1,0 +1,121 @@
+/* ===== Global Settings ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Main layout background */
+.main-layout { 
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  background-size: cover;
+  width: 100%;
+    color: #fff;
+  min-height: 100vh;
+  position: relative; 
+  overflow-x: hidden;
+  
+  
+}
+
+/* Background circles */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Background circles */
+.bg-circle {
+  position: fixed;   /* <--- change from absolute to fixed */
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.1); /* matches your neon theme */
+  z-index: 0;
+  pointer-events: none; /* so they don’t block clicks */
+}
+
+.bg-circle-1 {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  right: -50px;
+}
+
+.bg-circle-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  left: -100px;
+}
+
+/* Content wrapper */
+.main-content {
+  position: relative;
+  z-index: 1; /* keep content above circles */
+  padding-top: 50px; /* space for navbar */
+  min-height: 100vh;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;  
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure content is above */
+section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Highlight text */
+.highlight {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Profile photo */
+.profile-photo, app-profile-image img {
+  max-width: 250px;
+  border: 5px solid #00e5ff;
+  border-radius: 50%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.profile-photo:hover, app-profile-image img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0px 8px 30px rgba(0, 229, 255, 0.7);
+}
+
+/* Animations */
+.fade-in-left {
+  animation: fadeInLeft 1.2s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeInRight 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+ 
+
+@media (max-width: 768px) {
+  .main-layout {
+    overflow-y: auto; 
+       /* enable scroll only on mobile */
+  }
+}
+
+

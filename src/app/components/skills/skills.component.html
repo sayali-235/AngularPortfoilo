@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<section class="skills-section" id="skills">
+  <div class="container">
+    <h2 class="section-title">Skills & Technologies</h2>
+    <p class="description">A collection of tools and technologies I work with</p>
+
+    <div class="skills-grid">
+      <div class="skill-card" *ngFor="let skill of skills">
+        <div class="icon-wrapper">
+          <img [src]="skill.icon" [alt]="skill.name" />
+        </div>
+        <p class="skill-name">{{ skill.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+/* Full-screen home section */
+.home-section {
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  padding: 0 20px;
+  text-align: center;      /* keep text centered */
+}
+
+ 
+@keyframes moveBg {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20%, 20%); }
+  100% { transform: translate(0, 0); }
+}
+
+ 
+/* Name highlight */
+.highlight {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Left content animations */
+.fade-in-left {  background: radial-gradient(circle, rgba(0,229,255,0.15), transparent 70%);
+  animation: fadeInLeft 1.2s ease forwards;
+  opacity: 0;
+}
+.fade-in-delay {
+  animation: fadeInLeft 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Right image animation */
+.fade-in-right {
+  animation: fadeInRight 1.5s ease forwards;
+  opacity: 0;
+}
+.typing-text {
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 3px solid #ffcc00;
+  white-space: nowrap;   /* keep in one line */
+  letter-spacing: 2px;
+  display: inline-block;
+  max-width: 100%;       /* never overflow container */
+
+  animation: typing 4s steps(42, end) forwards,
+             blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to   { width: 50ch; } /* must match character count */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Responsive font-size scaling */
+@media (max-width: 1024px) {
+  .typing-text {
+    font-size: 1rem;
+     letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 0.9rem;
+     letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 0.75rem;  /* smaller so it never breaks line */
+    letter-spacing: 1px; /* tighter for small screens */
+  }
+}
+
+/* Buttons */
+.custom-btn {
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.custom-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 25px rgba(0, 229, 255, 0.6);
+}
+ 
+
+/* Keyframes */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+ 

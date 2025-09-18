@@ -1,0 +1,118 @@
+.footer-section {
+  position: relative;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #fff;
+  padding: 80px 20px 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand h2 {
+  font-size: 2rem;
+  color: #00e5ff;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg, #a3ffcb, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-brand p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.link-group h4 {
+  margin-bottom: 10px;
+  color: #00e5ff;
+  font-size: 1.1rem;
+}
+
+.link-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-group ul li {
+  margin-bottom: 8px;
+}
+
+.link-group ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link-group ul li a:hover {
+  color: #a3ffcb;
+  transform: translateX(5px);
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.social-icons li a {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #a3ffcb;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Animated floating shapes */
+.footer-animation span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #00e5ff33;
+  border-radius: 50%;
+  animation: float 6s infinite;
+}
+
+.footer-animation span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.footer-animation span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.footer-animation span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.footer-animation span:nth-child(4) { left: 70%; animation-delay: 1s; }
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-50px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.7; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container { flex-direction: column; align-items: center; gap: 30px; }
+  .footer-links { flex-direction: column; gap: 20px; }
+}

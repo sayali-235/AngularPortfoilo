@@ -1,39 +1,80 @@
-/* Navbar custom styling */
+/* Navbar styling - unified with home gradient */
+/* Navbar styling - unified with home gradient */
 .navbar {
-  background: #111; /* dark background */
-  padding: 0.8rem 2rem;
+  background: transparent;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.4s ease, padding 0.4s ease;
+}
 
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #00bcd4 !important; /* highlight brand */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+nav.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  padding: 0.5rem 2rem;
+}
 
-  .navbar-nav {
-    margin-left: auto; /* push menu to right */
 
-    .nav-link {
-      color: rgb(10, 8, 8) !important;
-      margin: 0 0.5rem;
-      transition: all 0.3s ease-in-out;
-      font-weight: 500;
-    }
+/* Ensure page content doesn't overlap navbar */
+.main-layout {
+  padding-top: 80px; /* adjust if navbar height changes */
+}
 
-    .nav-link:hover,
-    .nav-link.active {
-      color: #00bcd4 !important; /* hover effect */
-      text-decoration: underline;
-    }
-  }
 
-  .navbar-toggler {
-    border: none;
-    background: transparent;
-  }
 
-  .navbar-toggler-icon {
-    filter: invert(1); /* makes hamburger icon white */
-  }
+/* Brand */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00e5ff !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+  color: #ffcc00 !important;
+}
+
+/* Nav links */
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #f0f0f0 !important;
+  margin: 0 0.8rem;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link.active {
+  color: #00e5ff !important;
+  font-weight: 600;
+}
+/* Hover underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #00e5ff;
+  transition: width 0.3s ease;
+}
+/* .nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+} */
+.nav-link:hover {
+  color: #00e5ff !important;
+}
+
+/* Mobile menu */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
 }
